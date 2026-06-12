@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#terminal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#terminal-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #00ff00;
+    margin-bottom: 10px;
+}
+
+#output {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+}
+
+#output div {
+    margin-bottom: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+#prompt {
+    margin-right: 5px;
+    color: #00ff00;
+}
+
+#command-input {
+    flex: 1;
+    background-color: #000000;
+    color: #00ff00;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    caret-color: #00ff00;
+}
+
+/* 代码高亮样式 */
+.code-line {
+    color: #ffffff;
+}
+
+.error-line {
+    color: #ff0000;
+}
+
+.success-line {
+    color: #00ff00;
+}
+
+.info-line {
+    color: #00ffff;
+}
+
+.warning-line {
+    color: #ffff00;
+}
+
+/* 加载动画 */
+.loading {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
